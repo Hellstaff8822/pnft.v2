@@ -1,0 +1,65 @@
+@import "mixins";
+.auth {
+  display: flex;
+  justify-content: space-between;
+  padding: 32px;
+  max-width: 1440px;
+  margin-inline: auto;
+  border-radius: 44px;
+  background-color: #fcfdff;
+  position: relative;
+  @include tablet {
+    flex-direction: column;
+  }
+
+  @include mobile {
+    padding: 88px 24px 90px 24px;
+  }
+}
+.auth-info {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.auth-img {
+  max-width: 768px;
+  padding-left: 10px;
+  img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  @include tablet {
+    display: none;
+  }
+}
+
+.auth-indicator {
+  display: none;
+  @include tablet{
+    display: block;
+    position: absolute;
+    bottom: 10px;
+    right: 41%;
+    width: 134px;
+    height: 5px;
+    border-radius: 2.5px;
+    background: rgba(52, 64, 84, 0.85);
+  }
+  
+  @include mobile {
+    display: block;
+    position: absolute;
+    bottom: 10px;
+    right: 34%;
+    width: 134px;
+    height: 5px;
+    border-radius: 2.5px;
+    background: rgba(52, 64, 84, 0.85);
+  }
+}
+.container {
+  position: relative;
+}

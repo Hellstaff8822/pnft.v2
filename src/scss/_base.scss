@@ -1,0 +1,57 @@
+@import 'mixins';
+
+html,
+body {
+  font-family: var(--ff);
+}
+
+body {
+  background: #413f3f;
+}
+
+.btn {
+  padding: 12px 154px;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  cursor: pointer;
+  background: var(--primary-color);
+  @include tablet {
+    text-align: center;
+    padding: 10px 135px;
+  }
+
+  &_primary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 90px;
+    color: var(--secondary-color);
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--c-border);
+    transition: 0.2s ease-in-out;
+    background: inherit;
+    cursor: pointer;
+
+    &:hover {
+      border-color: var(--primary-color);
+    }
+    @include tablet {
+      padding: 9px 70px;
+    }
+  }
+}
+
+.btn__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
